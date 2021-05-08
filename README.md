@@ -1,1 +1,1 @@
-Hangman
+Password Generator
