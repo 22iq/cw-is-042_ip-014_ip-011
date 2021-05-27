@@ -1,9 +1,17 @@
 #include <iostream>
+#include <cstring>
 #include <libpwg/password.h>
+#include <libpwg/help.h>
 
-int main()
+int main(int argc, char* argv[])
 {
     Password password;
+    for (int i = 0; i < argc; ++i) {
+        if (strcmp(argv[i], "-help") == 0) {
+            help();
+            return 0;
+        }
+    };
 
     int length = 8;
     int lat_little = 0;
