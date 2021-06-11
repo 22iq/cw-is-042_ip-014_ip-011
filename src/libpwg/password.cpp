@@ -7,11 +7,14 @@ Password::Password()
     srand(time(0));
 }
 
-string Password::RunGenerations(int length, int lat_little)
+string Password::RunGenerations(int length, int lat_little, int numeric)
 {
     string alphabet = "";
     if(lat_little == 1 || alphabet.size()==0){
         alphabet+=LATIN_ALPHABET_LITTLE;
+    }
+    if(numeric == 1){
+        alphabet+=NUMERIC_ALPHABET;
     }
 
     password.clear();
