@@ -13,7 +13,7 @@ all: $(BIN_DIR)/$(BINNAME)
 
 .PHONY: all clean
 
-$(BIN_DIR)/$(BINNAME): $(OBJ_DIR)/$(LPWG)/$(BINNAME).o $(OBJ_DIR)/$(PWG)/PassGen.o
+$(BIN_DIR)/$(BINNAME): $(OBJ_DIR)/$(LPWG)/$(BINNAME).o $(OBJ_DIR)/$(PWG)/PassGen.o $(OBJ_DIR)/$(LPWG)/help.o
 	$(CXX) $(CFLAGS) -o $(BIN_DIR)/$(BINNAME) $(OBJ_DIR)/$(LPWG)/$(BINNAME).o $(OBJ_DIR)/$(PWG)/PassGen.o $(OBJ_DIR)/$(LPWG)/help.o
 bin:
 	mkdir bin
