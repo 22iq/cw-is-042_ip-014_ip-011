@@ -10,6 +10,7 @@ int main(int argc, char* argv[])
     int length = 8;
     int lat_little = 0;
     int numeric = 0;
+    int lat_big = 0;
 
     int num_of_pass = 1;
     int flag_letter = 0;
@@ -33,6 +34,11 @@ int main(int argc, char* argv[])
                 if (strcmp(argv[i], "-n") == 0) {
                     numeric = 1;
                     flag_letter = 1;
+                } else {
+                    if (strcmp(argv[i], "-uc") == 0) {
+                        lat_big = 1;
+                        flag_letter = 1;
+                    }
                 }
             }
         }
@@ -44,7 +50,7 @@ int main(int argc, char* argv[])
 
 
     for (int i = 0; i < num_of_pass; i++) {
-        cout << password.RunGenerations(length, lat_little, numeric) << endl;
+        cout << password.RunGenerations(length, lat_little, numeric, lat_big) << endl;
     }
 
     return 0;
