@@ -29,7 +29,7 @@ $(OBJ_DIR)/$(LPWG)/help.o: $(LPWG)/help.cpp
 
 test: $(BIN_DIR)/test
 
-$(BIN_DIR)/test: $(LPWG_TEST)/lat_little_test.o $(LPWG_TEST)/special_test.o $(LPWG_TEST)/numeric_test.o
+$(BIN_DIR)/test: $(LPWG_TEST)/lat_little_test.o $(LPWG_TEST)/special_test.o $(LPWG_TEST)/numeric_test.o $(LPWG_TEST)/lat_big_test.o
 	$(CXX) $(CFLAGS) -I $(TEST_DIR)/$(SRC_DIR) -I $(TP_DIR) -I $(SRC_DIR) $(TEST_DIR)/$(PWG)/password_test.cpp $(LPWG_TEST)/lat_little_test.o $(LPWG_TEST)/lat_big_test.o $(LPWG_TEST)/special_test.o $(LPWG_TEST)/numeric_test.o -o $(BIN_DIR)/test
 
 $(LPWG_TEST)/lat_little_test.o: $(TEST_DIR)/$(LPWG)/lat_little.cpp
